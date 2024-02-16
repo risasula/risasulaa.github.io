@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galery</title>
+    <link rel="stylesheet" href="projek.css"> 
+</head>
+<body>
+    <div class="container">
+        <h2>GALERY MEMORY TKJ 2</h2>
+        <div class="container-img">
+            <div class="image"><img src="./poto/IMG-20220903-WA00002.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00012.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00022.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00032.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00072.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00082.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00092.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00102.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00112.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00122.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00132.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00142.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00152.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00172.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00182.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00182.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00192.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20220903-WA00202.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20221130-WA00162.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20221130-WA00222.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20221130-WA00232.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0006.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0007.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0008.jpg" class="lolo-mir"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0010.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0017.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0019.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20230601-WA0020.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240130-WA0009.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240215-WA0025.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240215-WA0026.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240215-WA0027.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240215-WA0028.jpg" class="lolo"></div>
+            <div class="image"><img src="./poto/IMG-20240215-WA0029.jpg" class="lolo"></div>
+            
+            <div class="container-video">
+                <div class="image"><video src="./poto/VID-20240123-WA0006.mp4" class="loloo"></video></div>
+                <div class="image"><video src="./poto/VID-20240123-WA0001.mp4" class="loloo"></video></div>
+                <div class="image"><video src="./poto/VID-20240123-WA0001.mp4" class="loloo"></video></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- miring -->
+    <div class="pop-img">
+        <span>&times;</span>
+        <img src="./poto/IMG-20221130-WA00172.jpg">
+    </div>
+    <div class="pop-video">
+        <span>&times;</span>
+        <video controls src="./poto/VID-20240123-WA0001.mp4"></video>
+    </div>
+    <!-- bukan miring -->
+    <div class="pop-img-mir">
+        <span>&times;</span>
+        <img src="./poto/IMG-20220903-WA00012.jpg">
+    </div>
+    <!-- <div class="pop-video-mir">
+        <span>&times;</span>
+        <video controls src=""></video>
+    </div> -->
+    <script>
+        // poto
+        document.querySelectorAll(".lolo").forEach(Image => {
+        Image.onclick = () => {
+                document.querySelector(".pop-img").style.display = 'block';
+                document.querySelector(".pop-img img").src = Image.getAttribute("src");
+            }
+        })
+
+        document.querySelector(".pop-img span").onclick = () => {
+            document.querySelector(".pop-img").style.display = 'none';
+        }
+        // poto tidak miring
+        document.querySelectorAll(".lolo-mir").forEach(Image => {
+        Image.onclick = () => {
+                document.querySelector(".pop-img-mir").style.display = 'block';
+                document.querySelector(".pop-img-mir img").src = Image.getAttribute("src");
+            }
+        })
+
+        document.querySelector(".pop-img-mir span").onclick = () => {
+            document.querySelector(".pop-img-mir").style.display = 'none';
+        }
+
+        // video
+        document.querySelectorAll(".loloo").forEach(Image => {
+        Image.onclick = () => {
+                document.querySelector(".pop-video").style.display = 'block';
+                document.querySelector(".pop-video video").src = Image.getAttribute("src");
+            }
+        })
+
+        document.querySelector(".pop-video span").onclick = () => {
+            document.querySelector(".pop-video").style.display = 'none';
+        }
+    </script>
+</body>
+</html># risasulaa.github.io
